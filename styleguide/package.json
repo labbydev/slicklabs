@@ -1,0 +1,17 @@
+{
+  "name": "slicklabs-styleguide",
+  "version": "1.0.0",
+  "description": "a styleguide for the new slicklabs website",
+  "main": "index.js",
+  "scripts": {
+    "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
+    "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
+    "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
+    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "butler": "git://github.com/palantirnet/butler.git#3ee8baa7c465e400f981ecec95335cef6f8ea679"
+  }
+}
