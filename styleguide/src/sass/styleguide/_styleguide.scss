@@ -68,8 +68,18 @@
 }
 
 .styleguide-swatch {
-  width: 50%;
+  width: 49%;
   padding: 25px;
+  margin-bottom: 1em;
+  float: left;
+
+  &:nth-child(odd) {
+    margin-left: 1%;
+  }
+
+  &.white-text {
+    color: $white;
+  }
 }
 
 .styleguide-body {
