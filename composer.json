@@ -34,6 +34,7 @@
     "require": {
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^1.0",
+        "drupal/admin_toolbar": "^1.19",
         "drupal/config_installer": "^1.0",
         "drupal/core": "^8.0"
     },
