@@ -1,0 +1,72 @@
+/**
+ * @file
+ * Define default button styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+%button,
+.button,
+button:not(.toolbar-icon):not(.search-submit) {
+  @extend %track-out;
+  color: $white;
+  background-color: $blue;
+  border: 3px solid $blue;
+  font-weight: $bold;
+  font-family: $sans;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin: rhythm(1) auto;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  vertical-align: middle;
+  display: block;
+  transition: all 0.3s;
+  text-transform: uppercase;
+
+  @include breakpoint($bp1) {
+    display: inline-block;
+    width: auto;
+    margin: rhythm(.5) 1em rhythm(1) 0;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background: transparent;
+    color: $blue;
+  }
+}
+
+.button--primary {
+  @extend %button;
+  background-color: $red;
+  border: 3px solid $red;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+.button--transparent {
+  @extend %button;
+  background-color: transparent;
+  border: 3px solid $white;
+  color: $white;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: rgba($glitter, .7);
+    color: $midnight;
+    border: 3px solid $midnight
+  }
+}
