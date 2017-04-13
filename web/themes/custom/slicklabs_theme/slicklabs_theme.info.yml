@@ -1,0 +1,24 @@
+name: SlickLabs Drupal Theme
+type: theme
+description: Custom Drupal 8 theme for SlickLabs
+package: Other
+core: 8.x
+libraries:
+
+base theme: classy
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @UCL_THEME
+component-libraries:
+  UCL_THEME:
+    paths:
+      - templates
+
+regions:
+  header: Header
+  search: Search
+  utility: Utility
+  content: Content
+  bottom: Page Bottom
+  footer: Footer
