@@ -1,0 +1,15 @@
+{#
+  name: Hero
+  usage: Heros are large areas at the top of the page with background images, headlines and buttons.
+#}
+
+{% block component %}
+  <section class="hero" style="background-image: url('{{site.url}}/assets/imgs/SlickLabs-Hero-HR-4.jpg');">
+    <div class="container">
+      <h1 class="hero__headline">You dream it. We build it.</h1>
+      <div class="hero__description">Minimum viable product. Minimum viable price</div>
+      <a class="button--transparent" href="{{ site.url }}">Let's Get Started</a>
+    </div>
+  </section>
+{% endblock %}
+
