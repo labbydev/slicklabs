@@ -47,7 +47,7 @@ button:not(.toolbar-icon):not(.search-submit) {
 .button--primary {
   @extend %button;
   background-color: $red;
-  border: 3px solid $red;
+  border-color: $red;
 
   &:active,
   &:hover,
@@ -68,5 +68,18 @@ button:not(.toolbar-icon):not(.search-submit) {
   &:focus {
     background: rgba($glitter, .75);
     color: $midnight;
+  }
+
+  &.background--light {
+    background-color: rgba($midnight, .15);
+    border-color: $glitter;
+    color: $glitter;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background: rgba($midnight, .75);
+      color: $glitter;
+    }
   }
 }

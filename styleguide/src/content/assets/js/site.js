@@ -13,7 +13,12 @@
 
   Drupal.behaviors.site = {
     attach: function (context, settings) {
-      console.log('Hello World!');
+      // Check tranparent buttons against images for contrast
+      BackgroundCheck.init({
+        targets: '.button--transparent'
+      });
+      // Reprocess
+      BackgroundCheck.refresh(target);
     }
   };
 
