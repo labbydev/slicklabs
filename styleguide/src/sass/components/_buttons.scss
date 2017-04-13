@@ -58,15 +58,15 @@ button:not(.toolbar-icon):not(.search-submit) {
 
 .button--transparent {
   @extend %button;
-  background-color: transparent;
-  border: 3px solid $white;
-  color: $white;
+  background-color: rgba($glitter, .15);
+  border-color: $midnight;
+  color: $midnight;
+  font-weight: $heaviest;
 
   &:active,
   &:hover,
   &:focus {
-    background: rgba($glitter, .7);
+    background: rgba($glitter, .75);
     color: $midnight;
-    border: 3px solid $midnight
   }
 }

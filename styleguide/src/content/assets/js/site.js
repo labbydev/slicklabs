@@ -6,7 +6,7 @@
  * @see https://drupal.org/node/1446420
  * @see http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
  *
- * @copyright Copyright 2016 Palantir.net
+ * @copyright Copyright 2017 Lauren A. Burroughs
  */
 
 (function ($) {

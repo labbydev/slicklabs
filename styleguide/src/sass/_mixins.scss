@@ -105,3 +105,15 @@
 @mixin trans($property: all, $timing: .3s, $easing: ease) {
   transition: $property $timing $easing;
 }
+
+/* ==============================================================
+   Sass background detection
+   ============================================================== */
+
+//@function set-text-color($color) {
+//  @if (lightness($color) > 50) {
+//    @return $midnight; // Lighter backgorund, return dark color
+//  } @else {
+//    @return $glitter; // Darker background, return light color
+//  }
+//}

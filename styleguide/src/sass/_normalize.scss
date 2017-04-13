@@ -214,7 +214,7 @@ h2 {
   @include leader(1.25, $h2-font-size);
   @include trailer(.5, $h2-font-size);
   font-family: $sans;
-  font-weight: $black;
+  font-weight: $heaviest;
 }
 
 h3 {
