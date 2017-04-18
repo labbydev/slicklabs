@@ -58,6 +58,22 @@
   }
 }
 
+/* ==========================================================================
+   Flex-parent extend
+   ========================================================================== */
+
+%flex-parent,
+.flex-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Add a flex-parent that includes equal space between children
+%flex-parent--gutter,
+.flex-parent--gutter {
+  @extend %flex-parent;
+  justify-content: space-between;
+}
 
 /* ==============================================================
    Visually hidden extend

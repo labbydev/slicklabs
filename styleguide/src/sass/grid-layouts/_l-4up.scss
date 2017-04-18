@@ -63,3 +63,48 @@
     @include isolation-span(3, 10, 'none');
   }
 }
+
+// =============================================================================
+// 4-up layout using Flexbox for equal heights
+// =============================================================================
+
+.l-4up--flex__wrap {
+  @extend %flex-parent;
+}
+
+.l-4up--flex {
+  margin: 1%;
+  width: 99%;
+
+  @include breakpoint($bp1) {
+    width: 48%;
+
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint($bp2) {
+    width: 23%;
+
+    &:nth-of-type(2n+1) {
+      margin-left: 1%;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 1%;
+    }
+
+    &:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+}
