@@ -38,16 +38,17 @@
   height: 100vh;
   position: relative;
   z-index: 0;
+  color: $midnight;
 
   .container {
     background: none;
     border: none;
     max-width: 60%;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 0;
     right: 0;
-    margin: auto;
+    margin-top: -25vh;
     z-index: 5;
   }
 }
