@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Define styles for the hero component.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+.hero {
+  background-size: cover;
+  background-position: center center;
+  color: $glitter;
+  display: table;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  //&.has-overlay {
+  //  background-color: rgba($blue, .25);
+  //}
+}
+
+.hero__content-wrap {
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  width: 100%;
+}
