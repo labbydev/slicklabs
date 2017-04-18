@@ -1,0 +1,17 @@
+{#
+  name: Hero
+  usage: Heros are large areas at the top of the page with background images, headlines and buttons.
+#}
+
+{% block component %}
+  <section class="hero" style="background-image: url(https://unsplash.it/1400/300/?random);">
+    <div class="hero__overlay">
+      <div class="hero__content-wrap">
+        <h1 class="hero__headline">You dream it. We build it.</h1>
+        <div class="hero__description">Minimum viable product. Minimum viable price</div>
+        <a class="button--primary" href="{{ site.url }}">Let's Get Started</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
