@@ -54,6 +54,28 @@ button:not(.toolbar-icon):not(.search-submit) {
   padding: .5rem 1rem;
 }
 
+%button--icon,
+.button--icon {
+  position: relative;
+  padding: 1rem 3rem;
+
+  .fa {
+    @include trans();
+    position: absolute;
+    font-size: 125%;
+    left: 75%;
+    opacity: 0;
+    top: 30%;
+  }
+
+  &:hover {
+    .fa {
+      left: 85%;
+      opacity: 1;
+    }
+  }
+}
+
 .button--reverse {
   @extend %button;
   background-color: transparent;
