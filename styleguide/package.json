@@ -7,11 +7,11 @@
     "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
     "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
     "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
-    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js deploy"
+    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js spress-deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "butler": "git://github.com/palantirnet/butler.git#3ee8baa7c465e400f981ecec95335cef6f8ea679"
+    "butler": "git://github.com/palantirnet/butler.git#spress-deploy"
   }
 }
