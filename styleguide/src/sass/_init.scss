@@ -114,8 +114,8 @@ $glitter: #E8E9F3;
 $text-color: $gray-dark;
 $background-color: $white;
 /* Link (a:) */
-$link-color: $gray-medium;
-$link-hover: $gray-dark;
+$link-color: $blue;
+$link-hover: darken($blue, 25);
 /* Blockquote*/
 $blockquote-color: $gray-medium;
 /* Figcaption */

@@ -123,6 +123,8 @@ a {
   -webkit-text-decoration-skip: objects; /* 2 */
   color: $link-color;
   text-decoration: none;
+  font-weight: $medium;
+  border-bottom: 1px solid transparent;
 }
 
 /**
@@ -134,7 +136,8 @@ a:active,
 a:hover {
   outline-width: 0;
   color: $link-hover;
-  text-decoration: underline;
+  border-color: $link-hover;
+  text-decoration: none;
 }
 
 /* Text-level semantics
@@ -206,6 +209,7 @@ h1 {
   @include leader(1.25, $h1-font-size);
   @include trailer(.5, $h1-font-size);
   font-family: $serif;
+  color: $midnight;
 }
 
 h2 {
@@ -215,6 +219,7 @@ h2 {
   @include trailer(.5, $h2-font-size);
   font-family: $sans;
   font-weight: $heaviest;
+  color: $midnight;
 }
 
 h3 {
@@ -224,6 +229,7 @@ h3 {
   @include trailer(.5, $h3-font-size);
   font-family: $sans;
   font-weight: $bold;
+  color: $midnight;
 }
 
 h4 {
@@ -232,6 +238,7 @@ h4 {
   @include trailer(.5, $h4-font-size);
   font-family: $sans;
   font-weight: $medium;
+  color: $midnight;
 }
 
 h5 {
@@ -241,6 +248,7 @@ h5 {
   @include trailer(.25, $h5-font-size);
   font-family: $sans;
   font-weight: $medium;
+  color: $gray;
 }
 
 h6 {
@@ -250,6 +258,7 @@ h6 {
   @include trailer(.25, $h6-font-size);
   font-family: $sans;
   font-weight: $regular;
+  color: $gray;
 }
 
 

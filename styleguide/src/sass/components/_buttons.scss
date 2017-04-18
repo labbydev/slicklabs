@@ -41,6 +41,7 @@ button:not(.toolbar-icon):not(.search-submit) {
     text-decoration: none;
     background: transparent;
     color: $blue;
+    border-color: $blue;
   }
 }
 
@@ -74,6 +75,7 @@ button:not(.toolbar-icon):not(.search-submit) {
   &:hover,
   &:focus {
     color: $red;
+    border-color: $red;
   }
 
   &.button--reverse {
@@ -99,6 +101,7 @@ button:not(.toolbar-icon):not(.search-submit) {
   &:hover,
   &:focus {
     color: $midnight;
+    border-color: $midnight;
   }
 }
 
@@ -114,6 +117,7 @@ button:not(.toolbar-icon):not(.search-submit) {
   &:focus {
     background: rgba($glitter, .75);
     color: $midnight;
+    border-color: $midnight;
   }
 
   &.background--light {
@@ -126,6 +130,7 @@ button:not(.toolbar-icon):not(.search-submit) {
     &:focus {
       background: rgba($midnight, .75);
       color: $glitter;
+      border-color: $glitter;
     }
   }
 }

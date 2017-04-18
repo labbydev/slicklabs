@@ -9,13 +9,17 @@
   text-align: center;
 }
 
+.tout-group {
+  @extend .container;
+  text-align: center;
+}
+
 .tout__eyebrow {
   @extend h5;
 }
 
 .tout__headline {
   color: $midnight;
-  font-weight: $heaviest;
 }
 
 .tout__description {
