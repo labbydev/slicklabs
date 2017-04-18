@@ -12,6 +12,7 @@
   text-align: center;
 }
 
+%parallax-band,
 .banded-section--parallax {
   @extend %banded-section;
   background-attachment: fixed;
@@ -30,4 +31,34 @@
     max-width: 50%;
     padding: 1rem;
   }
+}
+
+.banded-section--overlay {
+  @extend %parallax-band;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+
+  .container {
+    background: none;
+    border: none;
+    max-width: 60%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 5;
+  }
+}
+
+%overlay,
+.overlay {
+  background: rgba($red, .75);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
