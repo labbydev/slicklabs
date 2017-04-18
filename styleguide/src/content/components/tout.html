@@ -54,7 +54,7 @@ description: Touts are small blocks of information. These usually appear in sets
 <hr />
 
 <h3>Image tout</h3>
-<p>This is a modification of the basic tout, that allows for image or icons to appear above the individual tout.</p>
+<p>This is a modification of the basic tout, that allows for images to appear above the individual tout.</p>
 <div class="clearfix">
   <div class="l-3up">
     {% include('image-tout.html') %}
@@ -97,3 +97,30 @@ description: Touts are small blocks of information. These usually appear in sets
   </div>
 </div>
 
+<hr />
+
+<h3>Icon tout</h3>
+<p>This is a modification of the basic tout, that allows for icons to appear above the individual tout.</p>
+<div class="clearfix">
+  <div class="l-3up">
+    {% include('icon-tout.html') %}
+  </div>
+</div>
+
+<h4>Image tout group</h4>
+<p>This component should traditionally appear as a 3-up on banded pages.</p>
+<div class="tout-group">
+  <div class="container">
+    <h2>Partners</h2>
+    <div class="lede">We only work with the best!</div>
+    <div class="l-3up--1">
+      {% include('icon-tout.html') %}
+    </div>
+    <div class="l-3up--2">
+      {% include('icon-tout.html') %}
+    </div>
+    <div class="l-3up--3">
+      {% include('icon-tout.html') %}
+    </div>
+  </div>
+</div>

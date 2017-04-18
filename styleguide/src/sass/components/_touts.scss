@@ -36,3 +36,20 @@
   margin-left: auto; /* centering */
   margin-right: auto;
 }
+
+.tout__icon {
+  background: $glitter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  img {
+    margin: 0;
+    filter: grayscale(1) brightness(0.45) contrast(1.05);
+    max-width: 75%;
+  }
+}
