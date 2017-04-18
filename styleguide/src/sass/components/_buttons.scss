@@ -45,6 +45,7 @@ button:not(.toolbar-icon):not(.search-submit) {
   }
 }
 
+%button--small,
 .button--small {
   font-size: $label;
   border-width: 2px;

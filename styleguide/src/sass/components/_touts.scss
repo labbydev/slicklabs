@@ -7,6 +7,11 @@
 
 .tout {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .tout-group {
@@ -21,4 +26,13 @@
   color: $gray;
   font-weight: $light;
   padding: rhythm(.5);
+}
+
+.tout__button {
+  @extend %button;
+  @extend %button--small;
+  margin-top: auto; /* push to bottom */
+  align-self: flex-start; /* collapse to own width */
+  margin-left: auto; /* centering */
+  margin-right: auto;
 }
