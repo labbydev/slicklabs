@@ -44,6 +44,27 @@ button:not(.toolbar-icon):not(.search-submit) {
   }
 }
 
+.button--small {
+  font-size: $label;
+  border-width: 2px;
+  border-radius: 1rem;
+  line-height: 1rem;
+  padding: .5rem 1rem;
+}
+
+.button--reverse {
+  @extend %button;
+  background-color: transparent;
+  color: $blue;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: darken($blue, 25);
+    border-color: darken($blue, 25);
+  }
+}
+
 .button--primary {
   @extend %button;
   background-color: $red;
@@ -53,6 +74,18 @@ button:not(.toolbar-icon):not(.search-submit) {
   &:hover,
   &:focus {
     color: $red;
+  }
+
+  &.button--reverse {
+    background-color: transparent;
+    color: $red;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: darken($red, 25);
+      border-color: darken($red, 25);
+    }
   }
 }
 
