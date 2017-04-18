@@ -3,15 +3,12 @@
   usage: touts are large areas at the top of the page with background images, headlines and buttons.
 #}
 
-{% block component %}
-  <section class="tout">
-    <div class="tout__content-wrap">
-      <figure>
-        <img src="https://unsplash.it/1400/300/?random" alt="Random placeholder to demonstrate where and how an image will appear for an image tout">
-      </figure>
-      <div class="tout__description">Minimum viable product. Minimum viable price</div>
-      <a class="button--transparent" href="{{ site.url }}">Let's Get Started</a>
-    </div>
-  </section>
-{% endblock %}
-
+<div class="tout">
+  <!--<div class="tout__eyebrow">Services</div>-->
+  <figure class="tout__image">
+    <img src="https://unsplash.it/400/300/?random" alt="Random placeholder to demonstrate where and how an image will appear for an image tout">
+  </figure>
+  <h3 class="tout__headline">Hardware</h3>
+  <div class="tout__description">Front end - we build/integrate sensors/hardware to measure the world.  Think about a camera, a temperature probe, an antenna, or anything that collects data about the world we live in... seriously anything!e</div>
+  <a class="button" href="{{ site.url }}">I need hardware</a>
+</div>

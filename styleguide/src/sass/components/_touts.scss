@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Define tout styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+.tout {
+  text-align: center;
+}
+
+.tout__eyebrow {
+  @extend h5;
+}
+
+.tout__headline {
+  color: $midnight;
+  font-weight: $heaviest;
+}
+
+.tout__description {
+  color: $gray;
+  font-weight: $light;
+  padding: rhythm(.5);
+}
