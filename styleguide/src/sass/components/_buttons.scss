@@ -56,6 +56,19 @@ button:not(.toolbar-icon):not(.search-submit) {
   }
 }
 
+.button--dark {
+  @extend %button;
+  background-color: $midnight;
+  border-color: $midnight;
+  text-shadow: 0 0 3px rgba(255,255,255,0.5);
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $midnight;
+  }
+}
+
 .button--transparent {
   @extend %button;
   background-color: rgba($glitter, .15);
