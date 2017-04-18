@@ -20,6 +20,18 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "git@github.com:enyo/dropzone.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:desandro/masonry.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:desandro/imagesloaded.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:palantirnet/the-build.git"
         },
         {
@@ -37,7 +49,11 @@
         "drupal/admin_toolbar": "^1.19",
         "drupal/config_installer": "^1.0",
         "drupal/core": "^8.0",
-        "drupal/paragraphs": "^1.1"
+        "drupal/entity_browser": "^1.0@RC",
+        "drupal/file_browser": "^1.0@alpha",
+        "drupal/file_entity": "^2.0@beta",
+        "drupal/paragraphs": "^1.1",
+        "drupal/pathauto": "^1.0@RC"
     },
     "require-dev": {
         "behat/behat": "^3.1",
