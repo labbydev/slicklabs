@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Define styles for banded sections.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+%banded-section,
+.banded-section {
+  padding-top: 2rem;
+  padding-bottom: 1.75rem;
+  text-align: center;
+}
+
+.banded-section--parallax {
+  @extend %banded-section;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+  .lede {
+    font-family: $sans;
+  }
+
+  .container {
+    background: rgba($glitter, .4);
+    border: 2px solid $midnight;
+    max-width: 50%;
+    padding: 1rem;
+  }
+}
