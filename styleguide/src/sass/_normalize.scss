@@ -403,6 +403,8 @@ figure {
  */
 
 hr {
+  @include leader(1.25, $h1-font-size);
+  @include trailer(.5, $h1-font-size);
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
