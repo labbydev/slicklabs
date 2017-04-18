@@ -15,19 +15,39 @@ description: Touts are small blocks of information. These usually appear in sets
   </div>
 </div>
 
-<h3>Image tout group</h3>
+<h4>Image tout group</h4>
 <p>This component should traditionally appear as a 3-up on banded pages.</p>
 <div class="tout-group">
-  <h2>What we do</h2>
-  <div class="lede">Ultimately SlickLabs is an IoT company.  This means we do the following:</div>
-  <div class="l-3up--1">
-    {% include('image-tout.html') %}
+  <div class="container">
+    <h2>What we do</h2>
+    <div class="lede">Ultimately SlickLabs is an IoT company.  This means we do the following:</div>
+    <div class="l-3up--1">
+      {% include('image-tout.html') %}
+    </div>
+    <div class="l-3up--2">
+      {% include('image-tout.html') %}
+    </div>
+    <div class="l-3up--3">
+      {% include('image-tout.html') %}
+    </div>
   </div>
-  <div class="l-3up--2">
-    {% include('image-tout.html') %}
-  </div>
-  <div class="l-3up--3">
-    {% include('image-tout.html') %}
+</div>
+
+<h4>Image tout group with background</h4>
+<p>Image touts can appear with or without a background color behind it.</p>
+<div class="tout-group" style="background-color: #F0F0F0;">
+  <div class="container">
+    <h2>What we do</h2>
+    <div class="lede">Ultimately SlickLabs is an IoT company.  This means we do the following:</div>
+    <div class="l-3up--1">
+      {% include('image-tout.html') %}
+    </div>
+    <div class="l-3up--2">
+      {% include('image-tout.html') %}
+    </div>
+    <div class="l-3up--3">
+      {% include('image-tout.html') %}
+    </div>
   </div>
 </div>
 
