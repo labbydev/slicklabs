@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7096451dfa2dfd9f8f226800cae8c58",
+    "content-hash": "4a8187cb4794f809b4fecb73efd589e6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -282,6 +282,90 @@
                 "versioning"
             ],
             "time": "2016-08-30T16:08:34+00:00"
+        },
+        {
+            "name": "desandro/imagesloaded",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/desandro/imagesloaded.git",
+                "reference": "b70cb307ea4a58a4211918dfda44c02ab79672f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/desandro/imagesloaded/zipball/b70cb307ea4a58a4211918dfda44c02ab79672f9",
+                "reference": "b70cb307ea4a58a4211918dfda44c02ab79672f9",
+                "shasum": ""
+            },
+            "type": "component",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David DeSandro",
+                    "homepage": "http://desandro.com/",
+                    "role": "developer"
+                }
+            ],
+            "description": "JavaScript is all like _You images done yet or what?_",
+            "homepage": "http://imagesloaded.desandro.com",
+            "keywords": [
+                "dom",
+                "images",
+                "javascript",
+                "jquery-plugin",
+                "library",
+                "loaded",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/desandro/imagesloaded/tree/master",
+                "issues": "https://github.com/desandro/imagesloaded/issues"
+            },
+            "time": "2017-03-16T11:12:11+00:00"
+        },
+        {
+            "name": "desandro/masonry",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/desandro/masonry.git",
+                "reference": "15de33ab47c8c6d0f1f2fc76338e74229d6317be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/desandro/masonry/zipball/15de33ab47c8c6d0f1f2fc76338e74229d6317be",
+                "reference": "15de33ab47c8c6d0f1f2fc76338e74229d6317be",
+                "shasum": ""
+            },
+            "type": "component",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David DeSandro",
+                    "homepage": "http://desandro.com/",
+                    "role": "developer"
+                }
+            ],
+            "description": "Cascading grid layout library",
+            "homepage": "http://masonry.desandro.com",
+            "keywords": [
+                "browser",
+                "dom",
+                "grid",
+                "javascript",
+                "layout",
+                "library",
+                "outlayer"
+            ],
+            "support": {
+                "source": "https://github.com/desandro/masonry/tree/master",
+                "issues": "https://github.com/desandro/masonry/issues"
+            },
+            "time": "2016-08-30T01:32:02+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1556,7 +1640,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta3.zip",
-                "reference": null,
+                "reference": "8.x-2.0-beta3",
                 "shasum": "999624a08aeb23e759b2b4a682c5086eb6d87707"
             },
             "require": {
@@ -1634,6 +1718,64 @@
             "homepage": "https://www.drupal.org/project/file_entity",
             "support": {
                 "source": "http://cgit.drupalcode.org/file_entity"
+            }
+        },
+        {
+            "name": "drupal/metatag",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/metatag",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "604e45e89c19f5a8960b6a8ae3d80500d4328e6b"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/token": "*"
+            },
+            "require-dev": {
+                "drupal/metatag_dc": "*",
+                "drupal/metatag_open_graph": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1485902197"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/640498/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                }
+            ],
+            "description": "Manage meta tags for all entities.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "keywords": [
+                "php",
+                "seo"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/metatag",
+                "issues": "http://drupal.org/project/issues/metatag"
             }
         },
         {
@@ -1938,6 +2080,45 @@
                 "validator"
             ],
             "time": "2017-02-03T22:48:59+00:00"
+        },
+        {
+            "name": "enyo/dropzone",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enyo/dropzone.git",
+                "reference": "2df14f334aca521916433da452281a0f8616951d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enyo/dropzone/zipball/2df14f334aca521916433da452281a0f8616951d",
+                "reference": "2df14f334aca521916433da452281a0f8616951d",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matias Meno",
+                    "email": "m@tias.me",
+                    "homepage": "http://www.matiasmeno.com"
+                }
+            ],
+            "description": "Handles drag and drop of files for you.",
+            "homepage": "http://www.dropzonejs.com",
+            "keywords": [
+                "drag and drop",
+                "dragndrop",
+                "file upload",
+                "upload"
+            ],
+            "support": {
+                "source": "https://github.com/enyo/dropzone/tree/master",
+                "issues": "https://github.com/enyo/dropzone/issues"
+            },
+            "time": "2017-02-18T11:55:06+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -6896,10 +7077,13 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "desandro/imagesloaded": 20,
+        "desandro/masonry": 20,
         "drupal/entity_browser": 5,
         "drupal/file_browser": 15,
         "drupal/file_entity": 10,
-        "drupal/pathauto": 5
+        "drupal/pathauto": 5,
+        "enyo/dropzone": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

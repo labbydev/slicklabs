@@ -45,6 +45,8 @@
     ],
     "require": {
         "composer/installers": "^1.0",
+        "desandro/imagesloaded": "dev-master",
+        "desandro/masonry": "dev-master",
         "drupal-composer/drupal-scaffold": "^1.0",
         "drupal/admin_toolbar": "^1.19",
         "drupal/config_installer": "^1.0",
@@ -52,8 +54,10 @@
         "drupal/entity_browser": "^1.0@RC",
         "drupal/file_browser": "^1.0@alpha",
         "drupal/file_entity": "^2.0@beta",
+        "drupal/metatag": "^1.0",
         "drupal/paragraphs": "^1.1",
-        "drupal/pathauto": "^1.0@RC"
+        "drupal/pathauto": "^1.0@RC",
+        "enyo/dropzone": "dev-master"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -79,6 +83,7 @@
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:component", "type:library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
