@@ -9,6 +9,7 @@ services.yml
 !conf/drupal/settings.php
 !conf/drupal/services.yml
 web/sites/*/files
+web/sites/default/private
 
 # Ignore virtual environment and artifacts
 .vagrant/
@@ -23,6 +24,10 @@ web/profiles/contrib/
 
 # Ignore regular Composer dependencies
 /vendor/
+
+# Ignore libraries downloaded by Composer
+web/libraries
+libraries
 
 # Ignore npm dependencies
 node_modules/
