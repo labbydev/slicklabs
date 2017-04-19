@@ -18,6 +18,18 @@
     images: '.has-bkg-img'
   });
 
+  Drupal.behaviors.input_filled = {
+    attach: function (context, settings) {
+      $('input').blur(function(){
+        if($(this).val()!=null&&$(this).val()!=''){
+          $(this).addClass('' + 'is-filled')
+        } else {
+          $(this).removeClass('is-filled')
+        }
+      });
+    }
+  };
+
   Drupal.behaviors.scroll_links = {
     attach: function (context, settings) {
       var htmlBody = $('html, body');

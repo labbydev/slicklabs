@@ -7,14 +7,17 @@
 
 button,
 [type="button"],
-[type="reset"],
-[type="submit"] {
+[type="reset"] {
   @extend %button;
+}
+
+[type="submit"] {
+  @extend .button--primary;
 }
 
 .form-item{
   position: relative;
-  margin: 1em;
+  margin: 1em 0;
   vertical-align: top;
 
     label {
@@ -26,41 +29,44 @@ button,
       font-weight: $bold;
     }
 
-    input[type="text"],
-    textarea {
-      @include trans();
-      display: block;
-      padding: 0.8em;
-      border: 3px solid transparent;
-      border-radius: 0;
-      background: $glitter;
-      color: $midnight;
-      font-weight: $medium;
-      font-family: $sans;
+  input[type="text"],
+  textarea {
+    @include trans();
+    display: block;
+    padding: 0.8em;
+    border: 3px solid transparent;
+    border-radius: 0;
+    background: $glitter;
+    color: $midnight;
+    font-weight: $medium;
+    font-family: $sans;
+    width: 100%;
 
-      + label {
-        padding: 0 1rem;
-        position: absolute;
-        transform: translate3d(0, 3em, 0);
-        bottom: calc(100% + 10px);
-        z-index: 2;
-      }
+    + label {
+      padding: 0 1rem;
+      position: absolute;
+      transform: translate3d(0, 3em, 0);
+      bottom: calc(100% + 10px);
+      left: 0;
+      z-index: 2;
+    }
 
-      &:focus {
-        outline: none;
-        background-color: transparent;
-        border-color: $blue;
-        & + label {
-          color: $blue;
-          text-transform: uppercase;
-          transform: translate3d(0, 0, 0);
-          bottom: 100%;
-          font-size: $label;
-        }
+    &:focus,
+    &.is-filled {
+      outline: none;
+      background-color: transparent;
+      border-color: $blue;
+      & + label {
+        color: $blue;
+        text-transform: uppercase;
+        transform: translate3d(0, 0, 0);
+        bottom: 100%;
+        font-size: $label;
       }
     }
 
-  &.js-form-type-textfield {
-    max-width: 350px;
+    .is-dark &{
+      color: $glitter;
+    }
   }
 }

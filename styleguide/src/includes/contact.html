@@ -1,0 +1,43 @@
+{#
+  name: Contact form
+  usage: Contact form for the homepage
+#}
+
+{% block component %}
+  <div class="container">
+    <form id="myForm" action="#" method="post">
+      <div class="l-1up">
+        <div class="form-item js-form-type-textfield l-2up--1">
+          <input type="text" name="first-name" id="first-name" value="" tabindex="1">
+          <label for="first-name">First name</label>
+        </div>
+
+        <div class="form-item js-form-type-textfield l-2up--2">
+          <input type="text" name="last-name" id="last-name" value="" tabindex="1">
+          <label for="last-name">Last name</label>
+        </div>
+
+        <div class="form-item js-form-type-textfield l-2up--1">
+          <input type="text" name="email" id="email" value="" tabindex="1">
+          <label for="email">Email address</label>
+        </div>
+
+        <div class="form-item js-form-type-textfield l-2up--2">
+          <input type="text" name="phone" id="phone" value="" tabindex="1">
+          <label for="phone">Phone number</label>
+        </div>
+
+        <div class="form-item js-form-type-textarea l-1up">
+          <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+          <label for="textarea">How can we help you change the world?</label>
+        </div>
+
+        <div class="form-actions">
+          <input type="submit" value="Submit">
+        </div>
+
+      </div>
+    </form>
+  </div>
+{% endblock %}
+
