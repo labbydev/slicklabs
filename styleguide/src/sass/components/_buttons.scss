@@ -143,7 +143,7 @@ button:not(.toolbar-icon):not(.search-submit) {
     border-color: $midnight;
   }
 
-  &.background--light {
+  &.background--dark {
     background-color: rgba($midnight, .15);
     border-color: $glitter;
     color: $glitter;
