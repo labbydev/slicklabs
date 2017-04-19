@@ -60,7 +60,7 @@
         // Scroll to the destination.
         htmlBody.animate({
           scrollTop: destinationOffset
-        }, 500);
+        }, Math.abs(window.scrollY - $(this.hash).offset().top));
       });
     }
   };
