@@ -230,16 +230,16 @@ h2 {
     vertical-align: text-top;
     font-family: FontAwesome;
     font-style: normal;
-    font-size: $label;
+    font-size: $text;
   }
 
   &:before {
-    content: "\f053";
+    content: "\f068";
     margin-right: 20px;
   }
 
   &:after {
-    content: "\f054";
+    content: "\f068";
     margin-left: 20px;
   }
 
