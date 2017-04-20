@@ -5,7 +5,7 @@
  * @copyright Copyright (c) 2017 Lauren A. Burroughs
  */
 
-footer {
+.footer {
   @extend %banded-section;
   background: $glitter;
   font-size: $label;

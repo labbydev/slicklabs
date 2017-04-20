@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Define header styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+.header {
+  @extend %banded-section;
+  background: $blue;
+  overflow: hidden;
+  font-size: $label;
+}
+
+.logo {
+  float: left;
+  display: inline-block;
+}
