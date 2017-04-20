@@ -34,40 +34,6 @@
         }, delay);
       }
 
-      // Function to activate the sticky Header.
-      function addStickyHeader() {
-        headerJump.addClass( "sticky" );
-      }
-
-      // Function to deactivate the sticky Header.
-      function removeStickyHeader() {
-        // Reset properties when the sticky header is not used.
-        headerJump.removeClass( "sticky" );
-      }
-
-      // Function to check certain elements on the bio page and change them them based on scroll position and viewport size.
-      function pageNavChecker() {
-        window_width = $window.width();
-        // Check if this is desktop width.
-        if (window_width >= 900) {
-          // Add the sticky class to the bio header based on the header position.
-          if ( $window.scrollTop() > topScrollDistance ) {
-            addStickyHeader();
-          }
-          if ( $window.scrollTop() < topScrollDistance ) {
-            removeStickyHeader();
-          }
-        } else {
-          // Reset properties when window is small and the sticky header is not used.
-          removeStickyHeader();
-        }
-      }
-
-      // Check the elements whenever the bio page loads, resizes or scrolls.
-      $(window).on("load resize scroll",function(e){
-        debounce(pageNavChecker, 20);
-      });
-
       // Scrollto Links for Page nav.
       var scrollLink = $(".link--scroll");
 
@@ -82,8 +48,6 @@
         var destinationLink = $(this).attr('href');
         var destinationOffset = $(destinationLink).offset().top;
 
-        // Add the sticky header
-        addStickyHeader();
         // Subtract  header height from top offset to get the scroll destination.
         destinationOffset = ($(destinationLink).offset().top - (headerJumpHeight));
 

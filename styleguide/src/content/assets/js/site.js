@@ -17,6 +17,11 @@
     images: '.has-bkg-img'
   });
 
+  Drupal.behaviors.custom_waypoints = {
+    attach: function (context, settings) {
+    }
+  };
+
   Drupal.behaviors.input_filled = {
     attach: function (context, settings) {
       $('input').blur(function(){
