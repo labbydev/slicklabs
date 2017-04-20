@@ -226,20 +226,19 @@ h2 {
 
   &:before,
   &:after {
+    content: "+";
     color: $gray;
     vertical-align: text-top;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-size: $text;
+    font-family: $sans;
+    font-weight: $light;
+    font-size: $md-heading;
   }
 
   &:before {
-    content: "\f068";
     margin-right: 20px;
   }
 
   &:after {
-    content: "\f068";
     margin-left: 20px;
   }
 
