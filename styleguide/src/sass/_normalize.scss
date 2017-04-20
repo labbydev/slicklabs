@@ -131,13 +131,16 @@ a {
  * Remove the outline on focused links when they are also active or hovered
  * in all browsers (opinionated).
  */
-
-a:active,
-a:hover {
-  outline-width: 0;
-  color: $link-hover;
-  border-color: $link-hover;
-  text-decoration: none;
+a:not('.main-nav__link') {
+  &:active,
+  &:hover,
+  &:visited,
+  &:focus {
+    outline-width: 0;
+    color: $link-hover;
+    border-color: $link-hover;
+    text-decoration: none;
+  }
 }
 
 /* Text-level semantics
@@ -226,8 +229,8 @@ h2 {
 
   &:before,
   &:after {
-    content: "+";
     color: $gray;
+    content: "+";
     vertical-align: text-top;
     font-family: $sans;
     font-weight: $light;
@@ -239,6 +242,7 @@ h2 {
   }
 
   &:after {
+    content: "+";
     margin-left: 20px;
   }
 

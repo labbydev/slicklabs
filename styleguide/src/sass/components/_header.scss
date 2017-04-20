@@ -10,7 +10,7 @@
   background: $blue;
   box-shadow: 0 0 5px 3px rgba($midnight, .25);
   overflow: hidden;
-  font-size: $label;
+  font-size: $text;
   position: fixed;
   left: 0;
   right: 0;
@@ -25,6 +25,8 @@
 
 nav {
   margin-top: -1px;
+  text-transform: uppercase;
+  font-weight: $bold;
 
   ul {
     list-style: none;
@@ -32,23 +34,22 @@ nav {
     margin: 0;
     text-align: right;
 
-    li {
+    .main-nav__item {
+      display: inline-block;
+    }
+
+    .main-nav__link {
       @include trans();
+      @extend %track-out;
       color: rgba($glitter, 0.6);
       display: inline-block;
+      padding: 0 .5rem;
 
-      a {
-        @include trans();
-        color: rgba($glitter, 0.6);
-        display: inline-block;
-        padding: 0 .5rem;
-
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          border: none;
-          color: rgba($glitter, 1);
-        }
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+        color: rgba($glitter, 1);
       }
     }
   }
