@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Define footer styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+footer {
+  @extend %banded-section;
+  background: $glitter;
+  font-size: $label;
+  text-align: right;
+  overflow: hidden;
+
+  a {
+    margin: 0 .5rem;
+  }
+}
+
+.footer__copyright {
+  float: left;
+}
