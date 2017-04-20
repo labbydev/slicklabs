@@ -1,0 +1,33 @@
+---
+layout: element
+section: component
+type: main
+
+title: Profile Teaser
+description: This shows a teaser of the profiles showing their name, title, summary and photo to show how profiles will appear in their teaser format.
+---
+
+<h3>Profile Teaser</h3>
+<p>A single profile teaser</p>
+<div class="clearfix">
+  <div class="l-3up">
+    {% include('profile-teaser.html') %}
+  </div>
+</div>
+
+<h4>Profile teaser group</h4>
+<p>This component should traditionally appear as a 3-up on banded pages.</p>
+<div class="profile-teaser-group">
+  <div class="container">
+    <h2>Team</h2>
+    <div class="l-3up--1">
+      {% include('profile-teaser.html') %}
+    </div>
+    <div class="l-3up--2">
+      {% include('profile-teaser.html') %}
+    </div>
+    <div class="l-3up--3">
+      {% include('profile-teaser.html') %}
+    </div>
+  </div>
+</div>

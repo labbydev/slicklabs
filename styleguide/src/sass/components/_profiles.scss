@@ -1,0 +1,54 @@
+/**
+ * @file
+ * Define profile styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+.profile-teaser-group {
+  @extend %banded-section;
+}
+
+.profile-teaser {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-teaser__description {
+  color: $gray;
+  font-weight: $light;
+  padding: rhythm(.5);
+}
+
+.profile-teaser__head {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-teaser__image {
+  width: 49%;
+  img {
+    padding: .35rem;
+    border: 3px solid $gray;
+  }
+}
+
+.profile-teaser__headline {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-teaser__name {
+  margin: .5rem 0;
+}
+
+.profile-teaser__title {
+  @extend h5;
+  margin: .5rem 0;
+}
