@@ -24,6 +24,7 @@ button:not(.toolbar-icon):not(.search-submit) {
   display: block;
   transition: all 0.3s;
   text-transform: uppercase;
+  box-shadow: 0 0 5px 1px rgba($midnight, .25);
 
   @include breakpoint($bp1) {
     display: inline-block;
@@ -42,6 +43,7 @@ button:not(.toolbar-icon):not(.search-submit) {
     background: transparent;
     color: $blue;
     border-color: $blue;
+    box-shadow: inset 0 0 5px 1px rgba($midnight, .25);
   }
 }
 

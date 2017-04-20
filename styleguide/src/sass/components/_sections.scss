@@ -10,6 +10,16 @@
   padding-top: 2rem;
   padding-bottom: 1.75rem;
   text-align: center;
+
+  &.is-dark {
+    background: $midnight;
+    color: $glitter;
+  }
+
+  &.is-blue {
+    background: $blue;
+    color: $midnight;
+  }
 }
 
 %parallax-band,

@@ -214,12 +214,38 @@ h1 {
 
 h2 {
   @extend %display-type;
+  @extend %track-out;
   @include adjust-font-size-to($h2-font-size, 1.5);
   @include leader(1.25, $h2-font-size);
-  @include trailer(.5, $h2-font-size);
+  @include trailer(.75, $h2-font-size);
   font-family: $sans;
-  font-weight: $heaviest;
+  font-weight: $bold;
   color: $midnight;
+  text-transform: uppercase;
+  position: relative;
+
+  &:before,
+  &:after {
+    color: $gray;
+    vertical-align: text-top;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: $label;
+  }
+
+  &:before {
+    content: "\f053";
+    margin-right: 20px;
+  }
+
+  &:after {
+    content: "\f054";
+    margin-left: 20px;
+  }
+
+  .is-dark & {
+    color: $glitter;
+  }
 }
 
 h3 {

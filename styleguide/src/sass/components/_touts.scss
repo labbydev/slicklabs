@@ -26,6 +26,10 @@
   color: $gray;
   font-weight: $light;
   padding: rhythm(.5);
+
+  .is-blue & {
+    color: $midnight;
+  }
 }
 
 .tout__button {
@@ -39,6 +43,7 @@
 
 .tout__icon {
   background: $glitter;
+  box-shadow: 0 0 5px 3px rgba($midnight, .25);
   display: flex;
   align-items: center;
   justify-content: center;
