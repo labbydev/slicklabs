@@ -63,6 +63,14 @@
   }
 }
 
+.banded-section--tall {
+  @extend %banded-section;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 %overlay,
 .overlay {
   background: rgba($red, .75);
