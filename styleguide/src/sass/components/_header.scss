@@ -7,33 +7,50 @@
 
 .header {
   padding: 1.5rem 0 1rem;
-  background: $blue;
+  background: rgba($blue, .7);
   box-shadow: 0 0 5px 3px rgba($midnight, .25);
   overflow: hidden;
-  font-size: $text;
+  font-size: $sm-heading;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 100;
+
+  @include breakpoint($bp2) {
+    font-size: $text;
+  }
 }
 
 .logo {
-  float: left;
   display: inline-block;
-  margin: 0;
+
+  figure {
+    margin: 0;
+  }
+
+  @include breakpoint($bp2) {
+    float: left;
+  }
 }
 
 nav {
   margin-top: -1px;;
 
   ul {
+    display: none;
     list-style: none;
     padding: 0;
-    margin: 0;
-    text-align: right;
+    text-align: center;
+    margin-top: 50px;
 
     .main-nav__item {
-      display: inline-block;
+      display: block;
+      margin-bottom: .75rem;
+
+      @include breakpoint($bp2) {
+        display: inline-block;
+        margin-bottom: 0;
+      }
     }
 
     .main-nav__link {
@@ -57,7 +74,7 @@ nav {
         content: '';
         opacity: 0;
         bottom: 0;
-        transform: translateY(10px);
+        transform: translateY(15px);
       }
 
       &:hover,
@@ -67,9 +84,84 @@ nav {
 
         &:after {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(5px);
         }
       }
+    }
+
+    @include breakpoint($bp2) {
+      display: block;
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  &.is-open {
+    background: $blue;
+    height: 100%;
+
+    ul {
+      display: block;
+    }
+  }
+
+  .main-nav__trigger {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    span {
+      @include trans();
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 8%;
+      background-color: $glitter;
+      font-size: 0px;
+
+      &:before,
+      &:after {
+        @include trans();
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $glitter;
+        content: '';
+      }
+
+      &:before {
+        transform: translateY(-250%);
+      }
+
+      &:after {
+        transform: translateY(250%);
+      }
+    }
+
+    &.is-open {
+      span {
+        background-color: transparent;
+
+        &:before {
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    @include breakpoint($bp2) {
+      display: none;
     }
   }
 }

@@ -56,6 +56,16 @@
           scrollTop: destinationOffset
         }, Math.abs(window.scrollY - $(this.hash).offset().top));
       });
+
+      // open the menu toggle
+      var menuToggle = $('.main-nav__trigger');
+
+      menuToggle.click(function (event) {
+        // Prevent default anchor behavior so scrolling can animate.
+        event.preventDefault();
+        menuToggle.toggleClass('is-open');
+        menuToggle.parent('nav').toggleClass('is-open');
+      })
     }
   };
 
