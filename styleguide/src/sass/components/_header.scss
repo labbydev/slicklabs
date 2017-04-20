@@ -6,13 +6,50 @@
  */
 
 .header {
-  @extend %banded-section;
+  padding: 1.5rem 0 1rem;
   background: $blue;
+  box-shadow: 0 0 5px 3px rgba($midnight, .25);
   overflow: hidden;
   font-size: $label;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .logo {
   float: left;
   display: inline-block;
+  margin: 0;
+}
+
+nav {
+  margin-top: -1px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+
+    li {
+      @include trans();
+      color: rgba($glitter, 0.6);
+      display: inline-block;
+
+      a {
+        @include trans();
+        color: rgba($glitter, 0.6);
+        display: inline-block;
+        padding: 0 .5rem;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border: none;
+          color: rgba($glitter, 1);
+        }
+      }
+    }
+  }
 }
