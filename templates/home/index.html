@@ -10,15 +10,15 @@
 <body>
 
                   
-<header class="header">
-  <div class="container">
-    <div class="header__content">
-      <a href="#hero" class="link--scroll">
-        <figure class="logo">
-          <img src="https://static1.squarespace.com/static/5655cfbde4b0c668da456c25/t/56560be7e4b0fad364d58809/1448551081173/SlickLabs.png" alt="SlickLabs logo">
-        </figure>
-      </a>
-      
+<header id="header" class="header">
+  <div class="header__content container">
+    <a href="#hero" class="link--scroll logo">
+      <figure>
+        <img src="https://static1.squarespace.com/static/5655cfbde4b0c668da456c25/t/56560be7e4b0fad364d58809/1448551081173/SlickLabs.png" alt="SlickLabs logo">
+      </figure>
+    </a>
+    <a href="#" class="main-nav__trigger"><span>Menu</span></a>
+    
 <nav>
   <ul class="main-nav">
     <li class="main-nav__item"><a class="main-nav__link link--scroll" href="#what">What we do</a></li>
@@ -30,7 +30,6 @@
 </nav>
 
 
-    </div>
   </div>
 </header>
     
@@ -49,21 +48,21 @@
   </div>
 
     <div class="homepage" id="content">
-      <div id="what" class="banded-section" style="background-color: #F0F0F0;">
+      <section id="what" class="banded-section" style="background-color: #F0F0F0;">
         <div class="container">
           <h2>What we do</h2>
           <p class="lede">At SlickLabs we combine art and science to help you transform great ideas into beautiful products. Whereas most prototyping companies ask for a static set of requirements only to return weeks later with “something close,” our engineers, developers and designers are fully committed to keeping you engaged every step of the way … to deliver your idea exactly how it should be.</p>
           <h3>You dream it. We build it.</h3>
           <p class="lede">Whether it’s software or hardware, our expert team of engineers, developers and designers follow agile methodologies to get you a product you will love, and more importantly, help you “make your dent in the universe."</p>
         </div>
-      </div>
+      </section>
       
 <div class="banded-section--tall is-dark">
   <div class="container">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-      <div id="services" class="tout-group">
+      <section id="services" class="tout-group">
         <div class="container">
           <h2>Services</h2>
           <div class="lede">Ultimately SlickLabs is an IoT company.  This means we do the following:</div>
@@ -100,8 +99,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="team" class="profile-teaser-group">
+      </section>
+      <section id="team" class="profile-teaser-group">
         <div class="container">
           <h2>Team</h2>
           <div class="l-3up--1">
@@ -156,8 +155,8 @@
 </div>
           </div>
         </div>
-      </div>
-      <div id="partners" class="banded-section is-blue">
+      </section>
+      <section id="partners" class="banded-section is-blue">
         <div class="container">
           <h2>Partners</h2>
           <div class="l-4up--1">
@@ -197,8 +196,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="contact" class="banded-section is-dark">
+      </section>
+      <section id="contact" class="banded-section is-dark">
         
   <h2>Contact Us</h2>
   <div class="container">
@@ -237,7 +236,7 @@
     </form>
   </div>
 
-      </div>
+      </section>
     </div>
     
 <footer class="footer">
@@ -264,6 +263,7 @@
     <!-- Libraries -->
     <script src="https://labbydev.github.io/slicklabs/assets/libraries/styleguide.js"></script>
     <script src="https://labbydev.github.io/slicklabs/assets/js/background-check.min.js"></script>
+    <script src="https://labbydev.github.io/slicklabs/assets/js/jquery.waypoints.min.js"></script>
     <!-- Custom JS -->
     <script src="https://labbydev.github.io/slicklabs/assets/js/site.js"></script>
     <script src="https://labbydev.github.io/slicklabs/assets/js/page_nav.js"></script>
