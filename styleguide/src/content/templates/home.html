@@ -11,16 +11,16 @@ title: Homepage
     {% include('header.html') %}
     {% include('hero.html') %}
     <div class="homepage" id="content">
-      <div id="what" class="banded-section" style="background-color: #F0F0F0;">
+      <section id="what" class="banded-section" style="background-color: #F0F0F0;">
         <div class="container">
           <h2>What we do</h2>
           <p class="lede">At SlickLabs we combine art and science to help you transform great ideas into beautiful products. Whereas most prototyping companies ask for a static set of requirements only to return weeks later with “something close,” our engineers, developers and designers are fully committed to keeping you engaged every step of the way … to deliver your idea exactly how it should be.</p>
           <h3>You dream it. We build it.</h3>
           <p class="lede">Whether it’s software or hardware, our expert team of engineers, developers and designers follow agile methodologies to get you a product you will love, and more importantly, help you “make your dent in the universe."</p>
         </div>
-      </div>
+      </section>
       {% include('video.html') %}
-      <div id="services" class="tout-group">
+      <section id="services" class="tout-group">
         <div class="container">
           <h2>Services</h2>
           <div class="lede">Ultimately SlickLabs is an IoT company.  This means we do the following:</div>
@@ -57,8 +57,8 @@ title: Homepage
             </div>
           </div>
         </div>
-      </div>
-      <div id="team" class="profile-teaser-group">
+      </section>
+      <section id="team" class="profile-teaser-group">
         <div class="container">
           <h2>Team</h2>
           <div class="l-3up--1">
@@ -71,8 +71,8 @@ title: Homepage
             {% include('profile-teaser.html') %}
           </div>
         </div>
-      </div>
-      <div id="partners" class="banded-section is-blue">
+      </section>
+      <section id="partners" class="banded-section is-blue">
         <div class="container">
           <h2>Partners</h2>
           <div class="l-4up--1">
@@ -112,10 +112,10 @@ title: Homepage
             </div>
           </div>
         </div>
-      </div>
-      <div id="contact" class="banded-section is-dark">
+      </section>
+      <section id="contact" class="banded-section is-dark">
         {% include('contact.html') %}
-      </div>
+      </section>
     </div>
     {% include('footer.html') %}
 

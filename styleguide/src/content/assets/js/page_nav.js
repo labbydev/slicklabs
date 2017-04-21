@@ -64,7 +64,8 @@
         // Prevent default anchor behavior so scrolling can animate.
         event.preventDefault();
         menuToggle.toggleClass('is-open');
-        menuToggle.parent('nav').toggleClass('is-open');
+        menuToggle.next('nav').toggleClass('is-open');
+        menuToggle.parents('.header').toggleClass('is-open');
       })
     }
   };
