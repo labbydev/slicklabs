@@ -2,6 +2,8 @@ uuid: b0a2dc8d-f429-47c1-a4a0-8383aec82833
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
   theme:
     - slicklabs_theme
 _core:
@@ -17,4 +19,11 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      homepage: homepage
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
