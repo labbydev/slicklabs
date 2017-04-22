@@ -18,9 +18,9 @@ $settings['hash_salt'] = '${drupal.hash_salt}';
 $settings['update_free_access'] = FALSE;
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+$settings['install_profile'] = '${drupal.profile}';
+
 $settings['file_public_path'] = '${drupal.settings.file_public_path}';
 $settings['file_private_path'] = '${drupal.settings.file_private_path}';
 
-if (file_exists(__DIR__ . '/settings.local.php')) {
-  include __DIR__ . '/settings.local.php';
-}
+$config['system.logging']['error_level'] = '${drupal.settings.error_level}';
