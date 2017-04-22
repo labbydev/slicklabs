@@ -1,203 +1,21 @@
+
 <?php
 
 /**
  * @file
- * Functions to support theming in the ucl_theme theme.
+ * Functions to support theming in the slicklabs_theme theme.
  */
+
 
 use Drupal\Core\Url;
 use Drupal\image\Entity\ImageStyle;
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function ucl_theme_preprocess_html(array &$variables) {
-}
-
-/**
- * Implements hook_page_attachments_alter().
- */
-function ucl_theme_page_attachments_alter(array &$page) {
-}
-
-/**
- * Implements hook_preprocess_page() for page.html.twig.
- */
-function ucl_theme_preprocess_page(array &$variables) {
-  if ($variables['page']['#title']) {
-    $variables['title'] = $variables['page']['#title'];
-  }
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function ucl_theme_preprocess_node(array &$variables) {
-  $node = $variables['node'];
-  $type = $node->getType();
-  $view_mode = $variables['view_mode'];
-
-  if ($type == 'testimonial' && $variables['view_mode'] == 'element') {
-    $field_image = $node->get('field_image');
-    if ($field_image->count() > 0) {
-      $image = $field_image->first()->getValue();
-      if ($image) {
-        $variables['image_url'] = ucl_theme_get_field_image_url($node, '150_square', 'field_image');
-        $variables['image_alt'] = $image['alt'];
-      }
-    }
-  }
-
-  if ($type == 'event' && $variables['view_mode'] == 'element') {
-    // Set a variable for start date.
-    $start_datetime = $node->get('field_event_start_and_end_time')->value;
-    $start_date = date("n/j", strtotime($start_datetime));
-    $variables['start_date'] = $start_date;
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_page_alter().
  */
-function ucl_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function slicklabs_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'page__node__' . $content_type;
   }
-}
-
-/**
- * Implements hook_theme_suggestions_node_alter().
- */
-function ucl_theme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
-  $view_mode = $variables['elements']['#view_mode'];
-  $node = $variables['elements']['#node'];
-  $suggestions[] = 'node__type_' . $node->getType() . '__view_mode_' . $variables['elements']['#view_mode'];
-  $suggestions[] = 'node__' . $variables['elements']['#view_mode'];
-}
-
-/**
- * Implements hook_preprocess_HOOK() for Block document templates.
- */
-function ucl_theme_preprocess_block(array &$variables) {
-}
-
-/**
- * Implements hook_theme_suggestions_field_alter().
- */
-function ucl_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-}
-
-/**
- * Implements hook_theme_suggestions_field_alter().
- */
-function ucl_theme_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
-}
-
-/**
- * Implements hook_theme_suggestions_views_view_alter().
- */
-function ucl_theme_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
-}
-
-/**
- * Implements hook_preprocess_form().
- */
-function ucl_theme_preprocess_form(array &$variables) {
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
- */
-function ucl_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if ($variables['element']['#form_id'] == 'search_block_form') {
-    $suggestions[] = 'form__search_block_form';
-  }
-}
-
-/**
- * Implements hook_preprocess_select().
- */
-function ucl_theme_preprocess_select(array &$variables) {
-}
-
-/**
- * Implements hook_preprocess_field().
- */
-function ucl_theme_preprocess_field(&$variables, $hook) {
-}
-
-/**
- * Implements hook_preprocess_details().
- */
-function ucl_theme_preprocess_details(array &$variables) {
-}
-
-/**
- * Implements hook_theme_suggestions_details_alter().
- */
-function ucl_theme_theme_suggestions_details_alter(array &$suggestions, array $variables) {
-}
-
-/**
- * Implements hook_preprocess_menu_local_task().
- */
-function ucl_theme_preprocess_menu_local_task(array &$variables) {
-}
-
-/**
- * Implements hook_preprocess_HOOK() for paragraph templates.
- */
-function ucl_theme_preprocess_paragraph__round_cta(&$variables) {
-  $paragraph = $variables['paragraph'];
-  $field_image = $paragraph->get('field_image');
-  if ($field_image->count() > 0) {
-    $image = $field_image->first()->getValue();
-    if ($image) {
-      $variables['image_url'] = ucl_theme_get_field_image_url($paragraph, '150_square', 'field_image');
-      $variables['image_alt'] = $image['alt'];
-    }
-  }
-  $field_link = $paragraph->get('field_round_link');
-  if ($field_link->count() > 0) {
-    $link = $field_link->first()->getValue();
-    $variables['link_url'] = Url::fromUri($link['uri']);
-    $variables['link_title'] = $link['title'];
-  }
-}
-
-/**
- * Get the URL to an image.
- *
- * @param object $node
- *   The node with the field on it.
- * @param string $style_name
- *   The name of an image style.
- * @param string $field
- *   The name of an the image field.
- *
- * @return string
- *   The URL to the styled image, or to the original image if the style does not
- *   exist.
- */
-function ucl_theme_get_field_image_url($node, $style_name = NULL, $field = NULL) {
-  $url = '';
-
-  $fields = $node->get($field);
-  if ($fields) {
-    $images = $fields->referencedEntities();
-  }
-
-  if (!empty($images)) {
-    $image = current($images);
-
-    if (!empty($style_name) && ($style = ImageStyle::load($style_name))) {
-      $url = $style->buildUrl($image->getFileUri());
-    }
-    else {
-      $url = $image->url();
-    }
-  }
-
-  return $url;
 }
