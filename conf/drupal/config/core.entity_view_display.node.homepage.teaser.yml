@@ -12,8 +12,14 @@ targetEntityType: node
 bundle: homepage
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    region: content
   links:
     weight: 100
     region: content
 hidden:
+  body: true
   field_hero: true
+  field_related_form: true
+  field_video: true
