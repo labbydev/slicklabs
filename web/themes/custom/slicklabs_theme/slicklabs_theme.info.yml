@@ -4,6 +4,8 @@ description: Custom Drupal 8 theme for SlickLabs
 package: Other
 core: 8.x
 libraries:
+  - slicklabs_theme/global-styling
+  - slicklabs_theme/fonts
 
 base theme: stable
 
@@ -17,8 +19,5 @@ component-libraries:
 
 regions:
   header: Header
-  search: Search
-  utility: Utility
   content: Content
-  bottom: Page Bottom
   footer: Footer
