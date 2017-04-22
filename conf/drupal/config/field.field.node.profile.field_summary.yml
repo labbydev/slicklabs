@@ -1,0 +1,19 @@
+uuid: 0afe7027-c8a6-4417-b224-f8a7fcca2cd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.profile
+id: node.profile.field_summary
+field_name: field_summary
+entity_type: node
+bundle: profile
+label: Summary
+description: 'Summary of this persons biography. The summary will appear with the headshot and title in the teaser for the profile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

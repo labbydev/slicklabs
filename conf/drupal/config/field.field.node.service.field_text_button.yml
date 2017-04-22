@@ -1,0 +1,19 @@
+uuid: 8c36f899-9a83-46cf-b09f-eb7581ef0506
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_button
+    - node.type.service
+id: node.service.field_text_button
+field_name: field_text_button
+entity_type: node
+bundle: service
+label: 'Button text'
+description: 'What is the call to action for this service? This will appear with the title and summary as a button encouraging users to Contact SlickLabs everywhere that this service appears as a teaser. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

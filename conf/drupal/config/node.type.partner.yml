@@ -1,0 +1,17 @@
+uuid: 3950fd2a-5d9f-4087-a839-cee7af0acd9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Partner
+type: partner
+description: 'Partner organizations that appear on the homepage'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

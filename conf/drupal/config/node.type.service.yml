@@ -1,0 +1,17 @@
+uuid: e929daba-5bbe-4a16-a532-1e16934e9a95
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Service
+type: service
+description: 'Services offered at Slicklabs, these appear on the homepage'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

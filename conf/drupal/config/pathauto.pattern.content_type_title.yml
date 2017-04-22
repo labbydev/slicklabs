@@ -1,0 +1,23 @@
+uuid: 4b43fd76-cdef-4886-835b-5cfc8f1d8856
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_title
+label: 'Content type/Title'
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  0afab468-f4ba-417e-a5eb-06c384aee88a:
+    id: node_type
+    bundles:
+      service: service
+      partner: partner
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0afab468-f4ba-417e-a5eb-06c384aee88a
+selection_logic: and
+weight: -5
+relationships: {  }

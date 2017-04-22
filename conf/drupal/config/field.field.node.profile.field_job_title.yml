@@ -1,0 +1,19 @@
+uuid: 3f0abe47-91ad-446c-a784-f5f32c763b13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_title
+    - node.type.profile
+id: node.profile.field_job_title
+field_name: field_job_title
+entity_type: node
+bundle: profile
+label: 'Job Title'
+description: 'What does this person do at SlickLabs?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

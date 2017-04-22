@@ -1,0 +1,19 @@
+uuid: 8f0a6afa-5aba-4634-8737-d9023b1ea292
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.service
+id: node.service.field_summary
+field_name: field_summary
+entity_type: node
+bundle: service
+label: Summary
+description: 'Add a summary of what this services is. This will appear with the title and button everywhere this service appears in it''s teaser format.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

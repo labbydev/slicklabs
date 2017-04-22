@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - node.type.homepage
+    - node.type.partner
+    - node.type.service
   module:
     - content_moderation
 _core:
@@ -68,3 +70,5 @@ type_settings:
   entity_types:
     node:
       - homepage
+      - partner
+      - service

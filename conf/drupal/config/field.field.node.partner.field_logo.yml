@@ -1,0 +1,38 @@
+uuid: 33a18347-ee49-4b0a-bd3c-031df911c2d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo
+    - node.type.partner
+  module:
+    - image
+id: node.partner.field_logo
+field_name: field_logo
+entity_type: node
+bundle: partner
+label: Logo
+description: 'The logo for the company, this should preferably be a transparent png.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: 'logo for [node:title]'
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
