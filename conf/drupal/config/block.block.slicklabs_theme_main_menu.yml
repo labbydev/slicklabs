@@ -13,7 +13,7 @@ _core:
 id: slicklabs_theme_main_menu
 theme: slicklabs_theme
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

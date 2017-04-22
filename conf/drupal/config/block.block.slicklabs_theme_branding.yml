@@ -1,6 +1,6 @@
 uuid: e762904e-c7ba-4fc5-a8eb-334fee43857b
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: slicklabs_theme_branding
 theme: slicklabs_theme
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:

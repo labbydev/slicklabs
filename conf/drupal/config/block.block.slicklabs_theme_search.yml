@@ -11,7 +11,7 @@ _core:
 id: slicklabs_theme_search
 theme: slicklabs_theme
 region: header
-weight: -1
+weight: -5
 provider: null
 plugin: search_form_block
 settings:

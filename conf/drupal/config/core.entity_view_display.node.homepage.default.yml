@@ -20,15 +20,20 @@ bundle: homepage
 mode: default
 content:
   body:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_hero:
     type: entity_reference_revisions_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -36,7 +41,7 @@ content:
     third_party_settings: {  }
     region: content
   field_related_form:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       source_entity: true
@@ -44,7 +49,7 @@ content:
     type: webform_entity_reference_entity_view
     region: content
   field_video:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       width: '854'
@@ -54,5 +59,4 @@ content:
     type: video_embed_player
     region: content
 hidden:
-  content_moderation_control: true
   links: true

@@ -10,7 +10,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.profile
   module:
-    - content_moderation
     - image
     - text
 id: node.profile.default

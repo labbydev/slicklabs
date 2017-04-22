@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.partner.field_summary
     - node.type.partner
   module:
-    - content_moderation
     - entity_browser
     - text
 id: node.partner.default

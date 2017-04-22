@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.homepage.field_video
     - node.type.homepage
   module:
-    - content_moderation
     - paragraphs
     - text
     - video

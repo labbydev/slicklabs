@@ -15,4 +15,4 @@ fonts:
   css:
     theme:
       'https://fonts.googleapis.com/css?family=Nixie+One|Roboto:300,400,500,700,900': { type: external, minified: true }
-      'https://use.fontawesome.com/694d2323e4.js': { type: external }
+      'https://use.fontawesome.com/694d2323e4.js': { type: external, minified: true }

@@ -1,0 +1,18 @@
+{#
+/**
+* @file
+* Theme override to display a homepage.
+*
+* @copyright Copyright (c) Lauren A. Burroughs
+*/
+#}
+
+{% include '@slicklabs_theme/site--header.html.twig' %}
+{{ content.field_hero }}
+<div class="homepage" id="content">
+  <section id="what" class="banded-section" style="background-color: #F0F0F0;">
+    <div class="container">{{ content.body }}</div>
+  </section>
+</div>
+
+{% include '@slicklabs_theme/site--footer.html.twig' %}

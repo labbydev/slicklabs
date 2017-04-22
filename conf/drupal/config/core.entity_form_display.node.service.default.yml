@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.service.field_text_button
     - node.type.service
   module:
-    - content_moderation
     - text
 id: node.service.default
 targetEntityType: node
