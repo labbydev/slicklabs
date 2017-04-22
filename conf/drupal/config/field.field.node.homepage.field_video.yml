@@ -1,0 +1,26 @@
+uuid: b3d12a2d-8cf9-4937-bdfc-c1bde2549941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.homepage
+  module:
+    - video
+id: node.homepage.field_video
+field_name: field_video
+entity_type: node
+bundle: homepage
+label: Video
+description: 'Video to appear on the homepage'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

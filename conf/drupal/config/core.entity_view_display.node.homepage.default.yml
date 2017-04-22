@@ -3,16 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.body
     - field.field.node.homepage.field_hero
+    - field.field.node.homepage.field_video
     - node.type.homepage
   module:
     - entity_reference_revisions
+    - text
     - user
+    - video
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
+  body:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  content_moderation_control:
+    weight: -20
+    region: content
   field_hero:
     type: entity_reference_revisions_entity_view
     weight: 101
@@ -21,6 +35,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 103
+    label: above
+    settings:
+      width: '854'
+      height: '480'
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_player
     region: content
   links:
     weight: 100

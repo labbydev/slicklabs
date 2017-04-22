@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.homepage
     - node.type.partner
+    - node.type.profile
     - node.type.service
   module:
     - content_moderation
@@ -71,4 +72,5 @@ type_settings:
     node:
       - homepage
       - partner
+      - profile
       - service
