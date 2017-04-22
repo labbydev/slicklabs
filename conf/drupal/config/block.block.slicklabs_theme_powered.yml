@@ -1,6 +1,6 @@
 uuid: 2438e1f2-3eb4-4767-9b3b-3b1060b6f320
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: slicklabs_theme_powered
 theme: slicklabs_theme
 region: header
-weight: 10
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:
