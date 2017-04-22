@@ -9,7 +9,7 @@ base theme: stable
 
 # This section is used by the contrib module, Component Libraries. It allows you
 # to reference .twig files in your sass/ directory by using the Twig namespace:
-# @UCL_THEME
+# @SLICKLABS_THEME
 component-libraries:
   UCL_THEME:
     paths:
