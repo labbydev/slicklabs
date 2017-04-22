@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.homepage.body
     - field.field.node.homepage.field_hero
+    - field.field.node.homepage.field_related_form
     - field.field.node.homepage.field_video
     - node.type.homepage
   module:
@@ -12,6 +13,7 @@ dependencies:
     - paragraphs
     - text
     - video
+    - webform
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
@@ -37,6 +39,12 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_related_form:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
     region: content
   field_video:
     weight: 26

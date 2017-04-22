@@ -51,6 +51,7 @@
         "drupal/admin_toolbar": "^1.19",
         "drupal/config_installer": "^1.0",
         "drupal/core": "^8.0",
+        "drupal/draggableviews": "^1.0",
         "drupal/entity_browser": "^1.0@RC",
         "drupal/file_browser": "^1.0@alpha",
         "drupal/file_entity": "^2.0@beta",

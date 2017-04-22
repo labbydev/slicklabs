@@ -1,10 +1,9 @@
 uuid: f300ff1f-af5f-465e-bc68-c44d483b2d51
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - comment
-    - node
     - user
 _core:
   default_config_hash: HacS-nsDH7uyoKhQHNyV_MNRClmPVuhU_fWZgNuEyIs
