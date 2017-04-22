@@ -55,6 +55,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -145,11 +149,23 @@ display:
             label: ''
           granularity: second
       title: Services
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'intro text'
+          empty: false
+          tokenize: false
+          content: '<p class="lede">Ultimately SlickLabs is an IoT company. This means we do the following:</p>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

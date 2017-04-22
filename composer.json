@@ -58,6 +58,7 @@
         "drupal/metatag": "^1.0",
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0@RC",
+        "drupal/twig_tweak": "^1.6",
         "drupal/video": "^1.2",
         "drupal/webform": "^5.0@beta",
         "enyo/dropzone": "dev-master"
