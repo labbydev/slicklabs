@@ -1,0 +1,24 @@
+{#
+/**
+* @file
+* Theme override to display a profile
+* when it appears as teaser.
+*
+* @copyright Copyright (c) Lauren A. Burroughs
+*/
+#}
+
+<div class="profile-teaser">
+  <div class="profile-teaser__head">
+    <figure class="profile-teaser__image">
+      {{ content.field_headshot }}
+    </figure>
+    <div class="profile-teaser__headline">
+      <div>
+        <h3 class="profile-teaser__name">{{ label }}</h3>
+        <div class="profile-teaser__title">{{ content.field_job_title }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-teaser__description">{{ content.field_summary }}</div>
+</div>

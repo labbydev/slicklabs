@@ -18,15 +18,15 @@ bundle: profile
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    weight: 2
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_headshot:
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -34,22 +34,13 @@ content:
     type: image
     region: content
   field_job_title:
-    weight: 104
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_summary:
-    weight: 102
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  field_summary: true
+  links: true
