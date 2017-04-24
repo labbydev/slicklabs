@@ -40,6 +40,53 @@
         <echo>Configure this target to load sample data and run the migrations.</echo>
     </target>
 
+    <!-- Target: load -->
+    <target name="load" description="Load the site from a db export.">
+        <property name="load.db_export_pattern" value="database-backup-*" />
+
+        <exec dir="${build.dir}" command="ls artifacts/${load.db_export_pattern}.sql | tail -1" outputProperty="load.db" />
+
+        <if>
+            <equals arg1="${load.db}" arg2="" />
+            <then>
+                <echo>Missing database export.
+
+                    The setup task bootstraps your development environment from an Acquia database export. You need to download this from the Acquia UI and place it in your 'artifacts' directory:
+                    artifacts/${load.db_export_pattern}database.sql.gz
+
+                    Alternatively, you can specify the filename export pattern; to use exports from the Acquia 'test' environment, try:
+                    vendor/bin/phing setup -Dload.db_export_pattern=test-uchicagoharris-uchicagoharrisstg-*
+
+                    Or, you can specify the export files directly:
+                    vendor/bin/phing setup -Dload.db=artifacts/my_db.sql.gz
+                </echo>
+                <fail message="Missing database export." />
+            </then>
+        </if>
+
+        <echo>Loading the `${load.db}` database...</echo>
+        <exec dir="${build.dir}" command="${load.db} | drush sqlc" checkreturn="true" logoutput="true" />
+
+        <drush command="sql-sanitize" assume="yes">
+            <option name="sanitize-email" value="user+%uid@localhost" />
+            <option name="sanitize-password" value="password" />
+        </drush>
+
+        <drush command="upwd">
+            <param>admin</param>
+            <option name="password" value="admin" />
+        </drush>
+
+        <echo>Importing config.</echo>
+        <drush command="cim" assume="yes">
+            <option name="source" value="/var/www/slicklabs.local/conf/drupal/config" />
+        </drush>
+
+        <!-- <drush command="updb" assume="yes" /> -->
+
+        <echo>Ok, check it out: ${drupal.uri}</echo>
+    </target>
+
     <!-- Target: link-libraries -->
     <target name="link-libraries">
         <delete dir="${build.dir}/${drupal.root}/libraries/" />
