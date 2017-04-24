@@ -20,12 +20,7 @@
 {% endif %}
 <div class="l-4up--flex__wrap">
   {% for row in rows %}
-    {%
-    set row_classes = [
-    default_row_class ? 'l-4up--flex',
-    ]
-    %}
-    <div{{ row.attributes.addClass(row_classes) }}>
+    <div {{ row.attributes.addClass('l-4up--flex') }}>
       {{ row.content }}
     </div>
   {% endfor %}
