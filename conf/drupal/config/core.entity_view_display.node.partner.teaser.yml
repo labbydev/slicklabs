@@ -5,29 +5,37 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.partner.body
+    - field.field.node.partner.field_logo
+    - field.field.node.partner.field_summary
     - node.type.partner
   module:
-    - text
+    - image
     - user
 id: node.partner.teaser
 targetEntityType: node
 bundle: partner
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
     weight: -20
     region: content
-  links:
-    weight: 100
+  field_logo:
+    type: image
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_summary:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
-  field_logo: true
-  field_summary: true
+  body: true
+  links: true

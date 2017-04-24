@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.partner.body
     - field.field.node.partner.field_logo
     - field.field.node.partner.field_summary
+    - image.style.medium
     - node.type.partner
   module:
     - image
@@ -19,28 +20,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_logo:
-    weight: 102
-    label: above
+    weight: 0
+    label: hidden
     settings:
-      image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  field_summary:
-    weight: 103
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  field_summary: true
+  links: true
