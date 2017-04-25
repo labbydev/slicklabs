@@ -15,20 +15,6 @@ web/sites/default/private
 .vagrant/
 /artifacts/
 
-# Ignore Drupal contrib downloaded by Composer
-drush/contrib
-web/core
-web/modules/contrib
-web/themes/contrib/
-web/profiles/contrib/
-
-# Ignore regular Composer dependencies
-/vendor/
-
-# Ignore libraries downloaded by Composer
-web/libraries
-libraries
-
 # Ignore npm dependencies
 node_modules/
 npm-debug.log
