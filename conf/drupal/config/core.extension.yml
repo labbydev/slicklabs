@@ -28,6 +28,7 @@ module:
   file_browser: 0
   file_entity: 0
   filter: 0
+  honeypot: 0
   image: 0
   link: 0
   menu_ui: 0

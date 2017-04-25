@@ -5,13 +5,12 @@ dependencies:
   config:
     - entity_browser.browser.browse_files
     - field.field.paragraph.hero.field_background_image
-    - field.field.paragraph.hero.field_button
+    - field.field.paragraph.hero.field_button_text
     - field.field.paragraph.hero.field_description
     - field.field.paragraph.hero.field_headline
     - paragraphs.paragraphs_type.hero
   module:
     - entity_browser
-    - link
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -30,13 +29,13 @@ content:
     third_party_settings: {  }
     type: entity_browser_file
     region: content
-  field_button:
+  field_button_text:
     weight: 3
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: string_textfield
     region: content
   field_description:
     weight: 2
