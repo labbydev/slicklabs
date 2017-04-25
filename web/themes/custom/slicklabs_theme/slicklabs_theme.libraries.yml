@@ -4,6 +4,7 @@ global-styling:
     theme:
       css/styles.css: {}
   js:
+    'https://use.fontawesome.com/694d2323e4.js': { type: external, minified: true }
     js/jquery.waypoints.min.js: {}
     js/background-check.min.js: {}
     js/page_nav.js: {}
@@ -15,4 +16,4 @@ fonts:
   css:
     theme:
       'https://fonts.googleapis.com/css?family=Nixie+One|Roboto:300,400,500,700,900': { type: external, minified: true }
-      'https://use.fontawesome.com/694d2323e4.js': { type: external, minified: true }
+      'https://use.fontawesome.com/694d2323e4.css': { type: external, minified: true }

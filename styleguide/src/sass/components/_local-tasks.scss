@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Define drupal tabs styles.
+ *
+ * @copyright Copyright (c) 2017 Lauren A. Burroughs
+ */
+
+#block-slicklabs-theme-local-tasks {
+  margin-top: 84px;
+  ul {
+    margin: 0;
+    background: $glitter;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+
+      a {
+        color: $midnight;
+        text-transform: uppercase;
+        font-weight: 900;
+        display: inline-block;
+        padding: 1rem .5rem;
+
+        &:hover,
+        &:focus,
+        &.is-active {
+          background: $gray;
+        }
+      }
+    }
+  }
+}

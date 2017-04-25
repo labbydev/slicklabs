@@ -29,6 +29,10 @@
   @include breakpoint($bp2) {
     font-size: $text;
   }
+
+  .toolbar-fixed & {
+    top: 81px;
+  }
 }
 
 .logo {
