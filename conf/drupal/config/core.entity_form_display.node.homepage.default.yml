@@ -49,9 +49,9 @@ content:
     weight: 26
     settings:
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
       allowed_providers:
         youtube: youtube
-      uri_scheme: public
     third_party_settings: {  }
     type: video_embed
     region: content

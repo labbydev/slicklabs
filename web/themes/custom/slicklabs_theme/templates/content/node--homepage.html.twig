@@ -12,6 +12,11 @@
   <section id="what" class="banded-section" style="background-color: #F0F0F0;">
     <div class="container">{{ content.body }}</div>
   </section>
+  <div class="banded-section--tall is-dark">
+    <div class="container">
+      {{ content.field_video }}
+    </div>
+  </div>
   <section id="services" class="tout-group">
     <div class="container">
       <h2>Services</h2>
@@ -28,6 +33,12 @@
     <div class="container">
       <h2>Partners</h2>
       {{ drupal_view('partners') }}
+    </div>
+  </section>
+  <section id="contact" class="banded-section is-dark">
+    <div class="container">
+      <h2>Contact Us</h2>
+      {{ content.field_related_form }}
     </div>
   </section>
 </div>
