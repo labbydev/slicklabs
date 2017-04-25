@@ -47,10 +47,10 @@
   }
 }
 
-nav {
-  margin-top: -1px;;
+.main-nav {
+  margin-top: -1px;
 
-  ul {
+  .main-nav__menu {
     display: none;
     list-style: none;
     padding: 0;
@@ -108,6 +108,7 @@ nav {
       display: block;
       margin: 0;
       text-align: right;
+      float: right;
     }
   }
 

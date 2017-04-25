@@ -29,8 +29,8 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <nav>
-      <ul{{ attributes.addClass('main-nav') }}>
+      <nav class="main-nav">
+      <ul{{ attributes.addClass('main-nav__menu') }}>
     {% endif %}
     {% for item in items %}
       {%
