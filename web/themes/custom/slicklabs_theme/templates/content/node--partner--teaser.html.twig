@@ -9,9 +9,9 @@
 #}
 
 <div class="tout">
-  <figure class="tout__icon">
+  <a href="{{ content.field_link[0].uri }}" ><figure class="tout__icon">
     {{ content.field_logo }}
-  </figure>
+    </figure></a>
   <h3 class="tout__headline">{{ label }}</h3>
   <div class="tout__description">{{ content.field_summary }}</div>
 </div>
