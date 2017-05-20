@@ -82,6 +82,11 @@ video {
   }
 }
 
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 /**
  * Add the correct display and remove excess height in iOS 4-7.
  */
